@@ -15,16 +15,18 @@
   </head>
   <body>
     <h1>Txt Styler</h1>
-    <div><label for="txt">Enter Your Text</label><input type="text" /></div>
-    <div>
-      <input type="range" id="font-size" min="11" max="144" />
-      <label for="font-size"> Font Size </label>
+    <div class="flex flex--column">
+      <div><label for="txt">Enter Your Text </label><input type="text" /></div>
+      <div>
+        <input type="range" id="font-size" min="11" max="144" />
+        <label for="font-size"> Font Size </label>
+      </div>
+      <div>
+        <input type="color" id="color" />
+        <label for="color"> Font color</label>
+      </div>
+      <p></p>
     </div>
-    <div>
-      <input type="color" id="color" />
-      <label for="color"> Font color</label>
-    </div>
-    <p></p>
     <script src="./scripts.js" type="module"></script>
   </body>
 </html>

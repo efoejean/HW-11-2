@@ -1,4 +1,5 @@
 const p = document.querySelector('p');
+const root = document.querySelector(':root');
 
 document
   .querySelector('input[type="text"]')
@@ -8,5 +9,10 @@ document
 document
   .querySelector('input[type="color"]')
   .addEventListener('input', event => {
-    p.style.color = event.target.value;
+    root.style.setProperty('--color', `${event.target.value}`);
+  });
+document
+  .querySelector('input[type="range"]')
+  .addEventListener('input', event => {
+    root.style.setProperty('--font-size', `${event.target.value}px`);
   });

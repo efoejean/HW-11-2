@@ -10,13 +10,11 @@ const maxInput = document.querySelector('input[name="max"]');
 minForm.addEventListener('submit', event => {
   event.preventDefault();
   rangeInput.min = minInput.value;
-  console.log(rangeInput.min);
 });
 
 maxForm.addEventListener('submit', event => {
   event.preventDefault();
   rangeInput.max = maxInput.value;
-  console.log(rangeInput.max);
 });
 
 document

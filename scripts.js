@@ -1,6 +1,7 @@
 /* eslint-disable no-alert */
-const p = document.querySelector('p');
 const root = document.querySelector(':root');
+const p = document.createElement('p');
+document.body.appendChild(p);
 
 const minForm = document.querySelector('#min-font-form');
 const maxForm = document.querySelector('#max-font-form');

@@ -9,7 +9,17 @@ const maxInput = document.querySelector('input[name="max"]');
 
 minForm.addEventListener('submit', event => {
   event.preventDefault();
-  rangeInput.min = minInput.value;
+  if (minInput.value === '') {
+    // eslint-disable-next-line no-alert
+    alert('Please Enter a Minimum font');
+    minInput.focus();
+  } else if (minInput.value < 10) {
+    // eslint-disable-next-line no-alert
+    alert(' Error Minimum Font has to be greater than 10. Please reenter!');
+    minInput.focus();
+  } else {
+    rangeInput.min = minInput.value;
+  }
 });
 
 maxForm.addEventListener('submit', event => {

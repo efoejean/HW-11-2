@@ -7,6 +7,12 @@ const rangeInput = document.querySelector('input[type="range"]');
 const minInput = document.querySelector('input[name="min"]');
 const maxInput = document.querySelector('input[name="max"]');
 
+minForm.addEventListener('submit', event => {
+  event.preventDefault();
+  rangeInput.min = minInput.value;
+  console.log(rangeInput.min);
+});
+
 document
   .querySelector('input[name="text"]')
   .addEventListener('keyup', event => {

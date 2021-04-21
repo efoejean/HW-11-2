@@ -16,7 +16,19 @@
   <body>
     <div class="flex flex--column container">
       <h1>Txt Styler</h1>
-      <div><label for="txt">Enter Your Text </label><input type="text" /></div>
+      <form id="min-font-form">
+        <input type="text" /><label for="Min">Min Font Size</label>
+        <button type="submit">Set Min Font Size!</button>
+      </form>
+      <form id="max-font-form">
+        <input type="text" /><label for="Max">Max Font Size</label>
+        <button type="submit">Set Max Font Size!</button>
+      </form>
+
+      <div>
+        <label for="txt">Enter Your Text </label
+        ><input type="text" name="text" />
+      </div>
       <div>
         <input type="range" id="font-size" min="11" max="144" />
         <label for="font-size"> Font Size </label>

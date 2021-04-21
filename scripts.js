@@ -13,6 +13,12 @@ minForm.addEventListener('submit', event => {
   console.log(rangeInput.min);
 });
 
+maxForm.addEventListener('submit', event => {
+  event.preventDefault();
+  rangeInput.max = maxInput.value;
+  console.log(rangeInput.max);
+});
+
 document
   .querySelector('input[name="text"]')
   .addEventListener('keyup', event => {

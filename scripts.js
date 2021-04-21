@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 const p = document.querySelector('p');
 const root = document.querySelector(':root');
 
@@ -24,7 +25,15 @@ minForm.addEventListener('submit', event => {
 
 maxForm.addEventListener('submit', event => {
   event.preventDefault();
-  rangeInput.max = maxInput.value;
+  if (maxInput.value === '') {
+    alert('Please Enter a Maximum Font');
+    maxInput.focus();
+  } else if (maxInput.value > 150) {
+    alert(' Error Maximum Font cannot be greater than 150. Please reenter!');
+    maxInput.focus();
+  } else {
+    rangeInput.max = maxInput.value;
+  }
 });
 
 document
